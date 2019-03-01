@@ -13,8 +13,14 @@
             name: 'acrossOrigin',
             age: 18
         };
+        window.onmessage = function (res) {
+            console.log(res);
+        }
         
-       
+        window.parent.postMessage({
+            data: '123',
+            obj: obj
+        }, 'http://localhost');
     </script>
 </body>
 </html> 
