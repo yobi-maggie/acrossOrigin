@@ -15,8 +15,9 @@
         };
         window.name = 'abc';
         window.onmessage = function (res) {
-            console.log(res);
+            console.log(res.data);
         }
+
         window.parent.postMessage(obj, "http://localhost");
       
     </script>
